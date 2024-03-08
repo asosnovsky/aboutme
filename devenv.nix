@@ -5,10 +5,9 @@
     caddy
     nss
   ];
-  processes.serve = {
+  processes.start-server = {
     exec = ''
       caddy run
     '';
   };
-  
 }
