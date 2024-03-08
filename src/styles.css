@@ -1,0 +1,100 @@
+:root {
+    --yellow: #737d00;
+    --light-yellow: #474d0987;
+    --black: #1b2205;
+}
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+a:hover {
+    color: var(--yellow);
+}
+body, html {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(27,34,5);
+    background: linear-gradient(142deg, var(--black) 24%, var(--yellow) 100%);
+}
+h1,h2,h3,h4 {
+    margin: 0;
+    text-align: center;
+}
+#me-box {
+    width: min(80vw, 600px);
+    height: min(250px, 90vh);
+    background-color: white;
+    border-radius: 5px;
+    padding: 2em;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 3px 3px var(--light-yellow);
+}
+
+#name {
+    text-transform: uppercase;
+}
+#links {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+#links > .link {
+    height: 35px;
+    width: calc(135px - 1em);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    border-top: 0.5px solid var(--light-yellow);
+    border-radius: 0.5em;
+    box-shadow: 3px 3px var(--light-yellow);
+}
+#links > .link > .social-image {
+    flex: 1;
+}
+#links > .link > .name {
+    flex: 4;
+}
+
+#links > .link:hover {
+    background-color: #cdcdcd87;
+    cursor: pointer;
+}
+
+#links > .link .social-image {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#links > .link .social-image img, #links > .link .social-image svg {
+    height: 1em;
+    width: 1em;
+    max-width: 1em;
+    max-height: 1em;
+}
+
+#links > .link .social-image span {
+    font-size: 1em;
+}
